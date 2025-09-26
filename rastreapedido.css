@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.track-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.track-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.track-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal del formulario de seguimiento */
+.track-main {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding: 40px 20px;
+    margin: 20px auto; /* Centrar con margen */
+    max-width: 700px; /* Ancho máximo para el formulario */
+    background-color: #e0e0e0; /* ¡AJUSTE CLAVE AQUÍ! Fondo gris claro como en la imagen */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.track-title {
+    font-size: 2.8em; /* Tamaño de fuente grande */
+    color: #343a40; /* Color de texto consistente */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.track-form-container {
+    width: 100%;
+    padding: 20px;
+    /* No hay fondo blanco extra aquí, el fondo gris ya está en .track-main */
+}
+
+.track-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre los grupos de formulario */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em; /* Letra más grande para las etiquetas */
+    color: #343a40; /* Color de texto más oscuro para las etiquetas */
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Borde más suave */
+    border-radius: 8px;
+    font-size: 1.2em; /* Letra más grande para los campos de entrada */
+    background-color: #fcfcfc; /* Fondo casi blanco para los campos */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna sutil */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #0000FF; /* Borde azul al enfocar */
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.2); /* Halo azul al enfocar */
+    outline: none;
+}
+
+/* Estilo para los campos de solo lectura (read-only) */
+.form-group input[readonly] {
+    background-color: #eeeeee; /* Fondo ligeramente más oscuro para campos de solo lectura */
+    color: #555;
+    cursor: default; /* Cursor por defecto */
+}
+
+.form-group input[readonly]:focus {
+    border-color: #ccc; /* Mantener el borde simple en readonly al enfocar */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Mantener la sombra interna */
+}
+
+.track-submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-top: 30px;
+    background-color: #0000FF; /* ¡AJUSTE CLAVE AQUÍ! Botón azul, consistente */
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
+}
+
+.track-submit-btn:hover {
+    background-color: #0000CD; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.4);
+}
+
+/* Barra de navegación inferior (similar a categories.html) */
+.bottom-nav {
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky; /* Se mantiene en la parte inferior */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around; /* Distribuye los iconos uniformemente */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6c757d; /* Color de icono gris */
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon svg { /* Aunque se usan iconos de FontAwesome, por si se usa SVG en el futuro */
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    fill: #6c757d;
+    transition: fill 0.3s ease;
+}
+
+.bottom-nav .nav-icon i.fas { /* Estilo específico para iconos de FontAwesome */
+    font-size: 28px; /* Tamaño del icono */
+    margin-bottom: 5px;
+    color: #6c757d; /* Color del icono */
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF; /* Azul al pasar el ratón */
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF; /* Azul del icono al pasar el ratón */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .track-main {
+        padding: 20px 10px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+
+    .track-title {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    .track-submit-btn {
+        padding: 14px;
+        font-size: 1.4em;
+    }
+
+    .track-header {
+        padding: 10px 15px;
+    }
+
+    .track-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .track-header .logo-text {
+        font-size: 2em;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .track-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .track-submit-btn {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .track-header .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .track-header .logo-text {
+        font-size: 1.8em;
+    }
+}

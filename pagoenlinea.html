@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos en Línea - Papelería Lucelly</title>
+    <link rel="stylesheet" href="pagoenlinea.css">
+</head>
+<body>
+  
+    <header class="payments-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Pagos en Línea</span>
+    </header>
+
+    <main class="payments-main">
+        <div class="invoice-summary-container">
+            <h2 class="invoice-summary-title">Resumen de Pago</h2>
+            <p class="payment-invoice-number">Factura No. <span id="paymentInvoiceNumber">----</span></p>
+            <table class="payment-invoice-table" id="paymentInvoiceTable">
+                <thead>
+                    <tr>
+                        <th class="col-detalle">Detalle</th>
+                        <th class="col-unid">Unid</th>
+                        <th class="col-vr-unidad">Vr unidad</th>
+                        <th class="col-vr-total">Vr Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+            </table>
+            <div class="payment-total-display">
+                <strong>Total a Pagar:</strong> <span id="paymentTotalAmount">$0.00</span>
+            </div>
+        </div>
+
+        <div class="card-sections-container">
+        
+            <section class="card-section credit-cards">
+                <h2 class="section-title">Tarjetas crédito</h2>
+                <div class="card-images">
+                    <img src="https://placehold.co/150x90/ADD8E6/000000?text=Visa" alt="Tarjeta Visa Crédito">
+                    <img src="https://placehold.co/150x90/007FFF/FFFFFF?text=MasterCard" alt="Tarjeta MasterCard Crédito">
+                    <img src="https://placehold.co/150x90/FFFF00/000000?text=American+Express" alt="Tarjeta American Express Crédito">
+                    <img src="https://placehold.co/150x90/4682B4/FFFFFF?text=Diners+Club" alt="Tarjeta Diners Club Crédito">
+                    <img src="https://placehold.co/150x90/7CFC00/000000?text=Falabella" alt="Tarjeta Falabella Crédito">
+                </div>
+            </section>
+
+            <section class="card-section debit-cards">
+                <h2 class="section-title">Tarjetas débito</h2>
+                <div class="card-images">
+                    <img src="https://placehold.co/150x90/ADD8E6/000000?text=Visa+Debit" alt="Tarjeta Visa Débito">
+                    <img src="https://placehold.co/150x90/007FFF/FFFFFF?text=MasterCard+Debit" alt="Tarjeta MasterCard Débito">
+                    <img src="https://placehold.co/150x90/4682B4/FFFFFF?text=Maestro" alt="Tarjeta Maestro Débito">
+                    <img src="https://placehold.co/150x90/7CFC00/000000?text=PSE" alt="Pagos PSE">
+                    <img src="https://placehold.co/150x90/FFD700/000000?text=Redebán" alt="Tarjeta Redebán Débito">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="graciasportucompra.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Finalizar</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/pagoenlinea.js"></script>
+</body>
+</html>

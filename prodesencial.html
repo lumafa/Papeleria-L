@@ -1,0 +1,127 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Esenciales - Papelería Lucelly</title>
+    <link rel="stylesheet" href="prodesencial.css">
+</head>
+<body>
+
+    <header class="essentials-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Papelería Lucelly</span>
+        <div class="header-actions">
+            <button class="add-to-cart-btn">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                Agregar al Carrito
+            </button>
+        </div>
+    </header>
+
+    <main class="essentials-main">
+        <div class="product-table-container">
+            <table class="product-table" id="productTable">
+                <thead>
+                    <tr>
+                        <th>Detalle Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad Pedido</th>
+                        <th class="subtotal-column">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-product-name="Arte y Manualidades" data-unit-price="10.50">
+                        <td>Arte y Manualidades</td>
+                        <td>$10.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Bolsas regalo" data-unit-price="1.80">
+                        <td>Bolsas regalo</td>
+                        <td>$1.80</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Bombas" data-unit-price="0.50">
+                        <td>Bombas</td>
+                        <td>$0.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Balones" data-unit-price="8.00">
+                        <td>Balones</td>
+                        <td>$8.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Cajas regalo" data-unit-price="3.00">
+                        <td>Cajas regalo</td>
+                        <td>$3.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Decoraciones" data-unit-price="7.50">
+                        <td>Decoraciones</td>
+                        <td>$7.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Juguetería" data-unit-price="15.00">
+                        <td>Juguetería</td>
+                        <td>$15.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Juegos didácticos" data-unit-price="20.00">
+                        <td>Juegos didácticos</td>
+                        <td>$20.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Libros" data-unit-price="12.00">
+                        <td>Libros</td>
+                        <td>$12.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Maletines" data-unit-price="25.00">
+                        <td>Maletines</td>
+                        <td>$25.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Pasillos" data-unit-price="5.00">
+                        <td>Pasillos</td>
+                        <td>$5.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Reloj" data-unit-price="30.00">
+                        <td>Reloj</td>
+                        <td>$30.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <strong>Total del Carrito:</strong> <span id="cartTotal">$0.00</span>
+            </div>
+        </div>
+        <div class="product-image-container">
+            <img src="Imagenes\images (2).jpeg" alt="Surtido de productos esenciales" class="decorative-image">
+        </div>
+    </main>
+
+    <div class="back-button-container">
+        <a href="categoria.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <script src="js/prodesencial.js"></script>
+</body>
+</html>

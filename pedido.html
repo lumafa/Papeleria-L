@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Papelería Lucelly</title>
+    <link rel="stylesheet" href="pedido.css">
+</head>
+<body>
+    
+    <header class="pedidos-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Pedidos</span>
+        <div class="header-actions">
+            <span class="order-number" id="orderNumberDisplay">Pedido No. --</span>
+            <button class="confirm-order-btn">Confirmar Pedido</button>
+        </div>
+    </header>
+
+    <main class="pedidos-main">
+        <div class="order-summary-container">
+            <table class="order-table" id="orderSummaryTable">
+                <thead>
+                    <tr>
+                        <th class="column-fecha">Fecha</th>
+                        <th class="column-unid">Unid</th>
+                        <th class="column-detalle">Detalle</th>
+                        <th class="column-v-unidad">V. unidad</th>
+                        <th class="column-v-total">V. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                </tbody>
+            </table>
+            <div class="order-total-display">
+                <strong>Total</strong> <span id="finalOrderTotal">$0.00</span>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Más</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/pedido.js"></script>
+</body>
+</html>

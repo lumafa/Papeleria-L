@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Despachos - Papelería Lucelly</title>
+    <link rel="stylesheet" href="despachos.css">
+</head>
+<body>
+    <header class="despachos-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Papeleria Lucelly</span>
+    </header>
+
+    <main class="despachos-main">
+        <div class="despachos-form-container">
+            <form class="despachos-form" id="dispatchForm">
+                <h1 class="form-title">Registrar Nuevo Despacho</h1>
+                
+                <div class="form-group">
+                    <label for="dispatchCity">Ciudad</label>
+                    <input type="text" id="dispatchCity" name="city" placeholder="Ciudad de destino" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchInvoiceNumber">Número Factura</label>
+                    <input type="text" id="dispatchInvoiceNumber" name="invoiceNumber" placeholder="Número de factura asociado" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchCustomerName">Nombre</label>
+                    <input type="text" id="dispatchCustomerName" name="customerName" placeholder="Nombre del cliente" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchDeliveryAddress">Dirección de Entrega</label>
+                    <input type="text" id="dispatchDeliveryAddress" name="deliveryAddress" placeholder="Dirección completa de entrega" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchPhone">Teléfono</label>
+                    <input type="tel" id="dispatchPhone" name="phone" placeholder="Número de teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchDepartureDate">Fecha de Salida</label>
+                    <input type="date" id="dispatchDepartureDate" name="departureDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchEstimatedDeliveryDate">Fecha Estimada de Entrega</label>
+                    <input type="date" id="dispatchEstimatedDeliveryDate" name="estimatedDeliveryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchVehicle">Vehículo</label>
+                    <input type="text" id="dispatchVehicle" name="vehicle" placeholder="Ej: Camioneta, Moto, etc." required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchDriverName">Nombre del Conductor</label>
+                    <input type="text" id="dispatchDriverName" name="driverName" placeholder="Nombre completo del conductor" required>
+                </div>
+                <div class="form-group">
+                    <label for="dispatchCode">Código Pedido</label>
+                    <input type="text" id="dispatchCode" name="code" placeholder="Código único del pedido para rastreo" required>
+                </div>
+                
+                <button type="submit" class="save-dispatch-btn">Guardar Despacho</button>
+            </form>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Más</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/despachos.js"></script>
+</body>
+</html>

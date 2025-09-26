@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.offers-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.offers-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.offers-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal de la página de ofertas */
+.offers-main {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding: 40px 20px;
+    background-color: #ffffff; /* Fondo blanco para el área de contenido */
+    margin: 20px auto; /* Centrar con margen */
+    max-width: 900px; /* Ancho máximo para la tabla */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.offers-title {
+    font-size: 2.8em; /* Tamaño de fuente grande */
+    color: #343a40; /* Color de texto consistente */
+    margin-bottom: 40px; /* Más espacio abajo */
+    font-weight: 700;
+    text-align: center;
+}
+
+.offers-table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+}
+
+.offers-table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre las celdas de la tabla */
+    margin-bottom: 20px;
+}
+
+.offers-table-container th,
+.offers-table-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Borde inferior para las filas */
+}
+
+.offers-table-container thead th {
+    background-color: #f2f2f2; /* Fondo para el encabezado de la tabla */
+    color: #343a40;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.offers-table-container tbody td {
+    font-size: 1.05em; /* Tamaño de fuente para el contenido de la tabla */
+    color: #000080; /* Azul oscuro para el texto del detalle, como en la imagen */
+}
+
+.offers-table-container tbody tr:hover {
+    background-color: #f5f5f5; /* Efecto hover en las filas */
+}
+
+/* Pie de página consistente con las otras páginas */
+.offers-footer {
+    background-color: #0000FF; /* Azul del pie de página consistente */
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FF007F; /* Rosa vibrante para el botón de inicio, consistente */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: #cc0066; /* Rosa más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.home-icon {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offers-main {
+        padding: 20px 10px;
+        margin: 15px auto;
+    }
+
+    .offers-title {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .offers-table-container th,
+    .offers-table-container td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .offers-header, .offers-footer {
+        padding: 10px 15px;
+    }
+
+    .offers-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .offers-header .logo-text {
+        font-size: 2em;
+    }
+
+    .home-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .offers-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .offers-table-container th,
+    .offers-table-container td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    .offers-header .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .offers-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .home-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}

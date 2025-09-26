@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.admon-header { /* Nombre de clase específico para esta página */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.admon-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.admon-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.admon-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Contenido principal del formulario de administración */
+.admon-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 550px; /* Ancho máximo para el contenedor de login */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.admon-login-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-title {
+    font-size: 2.8em;
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.admon-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #fcfcfc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #0000FF;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.login-submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-top: 30px;
+    background-color: #0000FF; /* Azul para el botón de login */
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
+}
+
+.login-submit-btn:hover {
+    background-color: #0000CD; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 255, 0.4);
+}
+
+.message-area {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    display: none; /* Oculto por defecto, se muestra con JS */
+}
+
+.message-area.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message-area.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admon-header {
+        padding: 10px 20px;
+    }
+    .admon-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+    .login-title {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+    .form-group label {
+        font-size: 1em;
+    }
+    .form-group input {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+    .login-submit-btn {
+        padding: 14px;
+        font-size: 1.4em;
+    }
+    .bottom-nav {
+        padding: 10px 0;
+    }
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .admon-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .admon-header .logo-text {
+        font-size: 1.8em;
+    }
+    .admon-header .header-title {
+        font-size: 1.5em;
+    }
+    .login-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .form-group input {
+        padding: 8px;
+        font-size: 1em;
+    }
+    .login-submit-btn {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}

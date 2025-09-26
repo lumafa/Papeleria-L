@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif; /* Usamos la fuente Inter */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Un color de fondo suave */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer esté en la parte inferior */
+}
+
+/* Contenedor principal para centrar el contenido */
+.about-main {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos del encabezado */
+
+
+/* Título de la página */
+.about-title {
+    color: #1a428a;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenido de la sección "Sobre Nosotros" */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre párrafos */
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    padding: 0 20px;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+}
+
+/* Sección de información de contacto */
+.contact-info-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f2f7; /* Fondo más claro para la sección de contacto */
+    border-radius: 10px;
+    border: 1px solid #c2e0e9;
+    width: calc(100% - 40px); /* Ajusta el ancho para el padding */
+    box-sizing: border-box;
+}
+
+.visit-us {
+    font-weight: bold;
+    color: #1a428a;
+    margin-bottom: 10px;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #131212;
+    margin-bottom: 20px;
+}
+
+.contact-buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366; /* Color de WhatsApp */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1DA851; /* Un verde más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+/* Imagen decorativa */
+.decorative-image-container {
+    width: 100%;
+    text-align: right; /* Alinea la imagen a la derecha */
+    margin-top: 20px;
+}
+
+.decorative-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del pie de página */
+.about-footer {
+    background-color: #2608e7;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ed10cc; /* Naranja para el botón de inicio */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: #ef06d4; /* Un naranja más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.home-icon {
+    margin-right: 8px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .about-main {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 2em;
+    }
+
+    .about-content {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .whatsapp-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .about-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        font-size: 0.9em;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+}

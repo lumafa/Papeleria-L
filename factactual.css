@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado de la página de factura */
+.factura-header {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.factura-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.factura-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.factura-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el número de factura a la derecha */
+}
+
+.factura-header .invoice-number {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+/* Contenido principal de la página de factura */
+.factura-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 900px; /* Ancho máximo para el contenido de la factura */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-container {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd; /* Borde general para el contenedor de la factura */
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.customer-info-section {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0000FF; /* Línea azul como en la imagen */
+    padding-bottom: 20px;
+}
+
+.customer-detail {
+    display: flex;
+    align-items: baseline; /* Alinea el texto base de cada línea */
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.customer-detail span:first-child {
+    font-weight: bold;
+    color: #555;
+    min-width: 120px; /* Ancho fijo para las etiquetas como "Nombre", "Teléfono" */
+    text-align: right; /* Alinea las etiquetas a la derecha */
+    padding-right: 15px;
+}
+
+.customer-detail span:last-child {
+    color: #343a40;
+    flex-grow: 1; /* Permite que el contenido tome el espacio restante */
+    text-align: left; /* Asegura que el texto llenado esté a la izquierda */
+}
+
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #f0f0f0; /* Fondo gris para la tabla como en la imagen */
+}
+
+.invoice-table thead th {
+    background-color: #0000FF; /* Fondo azul para el encabezado de la tabla */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #fff; /* Línea blanca separadora */
+}
+
+.invoice-table tbody td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc; /* Línea más clara para las filas */
+    font-size: 1em;
+    color: #343a40;
+    white-space: nowrap; /* Evita que el contenido se rompa */
+}
+
+/* Alineación de columnas específicas según la imagen */
+.column-fecha { width: 15%; }
+.column-unid { width: 10%; text-align: right; }
+.column-detalle { width: 45%; }
+.column-vr-unidad { width: 15%; text-align: right; }
+.column-vr-total { width: 15%; text-align: right; }
+
+.invoice-table tbody tr:hover {
+    background-color: #e8e8e8; /* Ligeramente más oscuro al pasar el ratón */
+}
+
+.invoice-total-display {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #0000FF; /* Línea azul para el total */
+    font-size: 1.8em; /* Tamaño de fuente más grande para el total */
+    font-weight: bold;
+    color: #1a428a; /* Azul oscuro para el total */
+    padding-right: 15px; /* Espacio para el total como en la imagen */
+}
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .factura-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .factura-header .header-title {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .factura-header .invoice-number {
+        font-size: 1em;
+        width: 100%;
+        text-align: left;
+    }
+
+    .factura-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+
+    .invoice-container {
+        padding: 15px;
+    }
+
+    .customer-info-section {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .customer-detail {
+        flex-direction: column; /* Apilar etiqueta y valor */
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .customer-detail span:first-child {
+        min-width: unset;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 3px;
+        font-size: 0.9em;
+    }
+
+    .customer-detail span:last-child {
+        font-size: 1em;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .invoice-table {
+        overflow-x: auto; /* Asegura scroll en tablas pequeñas */
+        display: block; /* Necesario para que overflow-x funcione */
+        white-space: normal; /* Permitir que el texto se ajuste */
+    }
+    .invoice-table thead, .invoice-table tbody, .invoice-table th, .invoice-table td, .invoice-table tr {
+        display: block; /* Para que las filas y celdas se puedan ajustar */
+    }
+    .invoice-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; /* Ocultar encabezados en móvil */
+    }
+    .invoice-table td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        padding-left: 50%; /* Espacio para la pseudo-etiqueta */
+        text-align: right;
+    }
+    .invoice-table td::before {
+        content: attr(data-label); /* Usa el data-label para mostrar la etiqueta */
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+    /* Estilos específicos para las columnas en móvil */
+    .invoice-table td.column-fecha::before { content: "Fecha:"; }
+    .invoice-table td.column-unid::before { content: "Unid:"; }
+    .invoice-table td.column-detalle::before { content: "Detalle:"; }
+    .invoice-table td.column-vr-unidad::before { content: "Vr unidad:"; }
+    .invoice-table td.column-vr-total::before { content: "Vr Total:"; }
+
+    .invoice-total-display {
+        font-size: 1.4em;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .factura-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .factura-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .factura-header .header-title {
+        font-size: 1.5em;
+    }
+
+    .invoice-total-display {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado de la página de pedidos */
+.pedidos-header {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.pedidos-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.pedidos-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pedidos-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el botón y número de pedido a la derecha */
+}
+
+.pedidos-header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el número de pedido y el botón */
+}
+
+.pedidos-header .order-number {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.confirm-order-btn {
+    background-color: #4CAF50; /* Verde para el botón de confirmar */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-order-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido principal de la página de pedidos */
+.pedidos-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 900px; /* Ancho máximo para el resumen de pedido */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary-container {
+    width: 100%;
+    padding: 20px;
+    overflow-x: auto; /* Permite scroll horizontal en tablas grandes */
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-table th,
+.order-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Evita que el contenido de las celdas se rompa */
+}
+
+.order-table thead th {
+    background-color: #f2f2f2;
+    color: #343a40;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.order-table tbody td {
+    font-size: 1.05em;
+    color: #343a40;
+}
+
+.order-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Alineación de columnas específicas según la imagen */
+.column-fecha { width: 15%; }
+.column-unid { width: 10%; text-align: right; }
+.column-detalle { width: 45%; }
+.column-v-unidad { width: 15%; text-align: right; }
+.column-v-total { width: 15%; text-align: right; }
+
+.order-table td:nth-child(2), /* Unid */
+.order-table td:nth-child(4), /* V. unidad */
+.order-table td:nth-child(5) { /* V. Total */
+    text-align: right;
+}
+
+
+.order-total-display {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #1a428a;
+}
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pedidos-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .pedidos-header .header-title {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .pedidos-header .header-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .pedidos-header .order-number {
+        font-size: 1em;
+    }
+
+    .confirm-order-btn {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .pedidos-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+
+    .order-summary-container {
+        padding: 15px;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .order-total-display {
+        font-size: 1.4em;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pedidos-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pedidos-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .pedidos-header .header-title {
+        font-size: 1.5em;
+    }
+
+    .pedidos-header .order-number {
+        font-size: 0.9em;
+    }
+
+    .confirm-order-btn {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 6px 8px;
+        font-size: 0.8em;
+    }
+
+    .order-total-display {
+        font-size: 1.2em;
+    }
+}

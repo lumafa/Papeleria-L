@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.cat-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.cat-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cat-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal de categorías */
+.categories-main {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding: 40px 20px;
+    background-color: #ffffff; /* Fondo blanco para el área de contenido */
+    margin: 20px auto; /* Centrar con margen */
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.categories-title {
+    font-size: 2.8em; /* Tamaño de fuente grande */
+    color: #8A2BE2; /* Color púrpura de la imagen */
+    margin-bottom: 40px; /* Más espacio abajo */
+    font-weight: 700;
+    text-align: center;
+}
+
+.category-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    width: 100%;
+}
+
+.category-card {
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px; /* Ancho fijo para las tarjetas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.category-card img {
+    max-width: 100%; /* Las imágenes se ajustan al ancho de la tarjeta */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.category-card h2 {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.view-product-btn {
+    padding: 12px 25px;
+    background-color: #dc07b5; /* Negro o gris oscuro para el botón */
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.view-product-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Barra de navegación inferior */
+.bottom-nav {
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky; /* Se mantiene en la parte inferior */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around; /* Distribuye los iconos uniformemente */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6c757d; /* Color de icono gris */
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon svg {
+    width: 28px; /* Tamaño del icono SVG */
+    height: 28px;
+    margin-bottom: 5px;
+    fill: #6c757d; /* Color del SVG */
+    transition: fill 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF; /* Azul al pasar el ratón */
+}
+
+.bottom-nav .nav-icon:hover svg {
+    fill: #0000FF; /* Azul del SVG al pasar el ratón */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .categories-main {
+        padding: 30px 15px;
+    }
+
+    .category-cards-container {
+        gap: 20px;
+    }
+
+    .category-card {
+        width: 45%; /* Dos columnas en tablets */
+        max-width: 300px; /* Asegura que no se estiren demasiado */
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-title {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .category-cards-container {
+        flex-direction: column; /* Una columna en móviles */
+        align-items: center; /* Centra las tarjetas */
+        gap: 25px;
+    }
+
+    .category-card {
+        width: 90%; /* Ocupa más ancho en móviles */
+    }
+
+    .cat-header {
+        padding: 10px 15px;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav .nav-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .cat-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cat-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .category-card {
+        width: 95%; /* Casi ancho completo en pantallas muy pequeñas */
+        padding: 15px;
+    }
+
+    .category-card h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .view-product-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

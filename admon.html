@@ -1,0 +1,55 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Papelería PL</title>
+    <link rel="stylesheet" href="admon.css">
+</head>
+<body>
+   
+    <header class="admon-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Acceso de Administración</span>
+    </header>
+
+    <main class="admon-main">
+        <div class="admon-login-container">
+            <h1 class="login-title">Iniciar Sesión</h1>
+            <form id="admonLoginForm" class="admon-form">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Clave Usuario</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu clave" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Entrar</button>
+                <div id="messageArea" class="message-area"></div>
+            </form>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Más</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/admon.js"></script>
+</body>
+</html>

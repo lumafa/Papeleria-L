@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Útiles Escolares - Papelería Lucelly</title>
+    <link rel="stylesheet" href="escolares.css">
+</head>
+<body>
+   
+    <header class="escolares-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Papelería Lucelly</span>
+        <div class="header-actions">
+            <button class="add-to-cart-btn">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                Agregar al Carrito
+            </button>
+        </div>
+    </header>
+
+    <main class="escolares-main">
+        <div class="product-table-container">
+            <table class="product-table" id="productTable">
+                <thead>
+                    <tr>
+                        <th>Detalle Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Cantidad Pedido</th>
+                        <th class="subtotal-column">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-product-name="Bolígrafos" data-unit-price="1.50">
+                        <td>Bolígrafos</td>
+                        <td>$1.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Borrador" data-unit-price="0.75">
+                        <td>Borrador</td>
+                        <td>$0.75</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Cuadernos" data-unit-price="3.00">
+                        <td>Cuadernos</td>
+                        <td>$3.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Cartulinas" data-unit-price="0.25">
+                        <td>Cartulinas</td>
+                        <td>$0.25</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Cartucheras" data-unit-price="5.00">
+                        <td>Cartucheras</td>
+                        <td>$5.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Compas" data-unit-price="2.50">
+                        <td>Compas</td>
+                        <td>$2.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Colbón" data-unit-price="1.20">
+                        <td>Colbón</td>
+                        <td>$1.20</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Colores" data-unit-price="8.00">
+                        <td>Colores</td>
+                        <td>$8.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Lápices" data-unit-price="0.50">
+                        <td>Lápices</td>
+                        <td>$0.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Marcadores" data-unit-price="1.75">
+                        <td>Marcadores</td>
+                        <td>$1.75</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Sacapuntas" data-unit-price="0.90">
+                        <td>Sacapuntas</td>
+                        <td>$0.90</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Tijeras de punta roma" data-unit-price="3.50">
+                        <td>Tijeras de punta roma</td>
+                        <td>$3.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Pegamento en barra" data-unit-price="1.00">
+                        <td>Pegamento en barra</td>
+                        <td>$1.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Plastilina" data-unit-price="2.00">
+                        <td>Plastilina</td>
+                        <td>$2.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Reglas" data-unit-price="0.80">
+                        <td>Reglas</td>
+                        <td>$0.80</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Vinilos" data-unit-price="4.50">
+                        <td>Vinilos</td>
+                        <td>$4.50</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                    <tr data-product-name="Materiales para aseo personal" data-unit-price="6.00">
+                        <td>Materiales para aseo personal.</td>
+                        <td>$6.00</td>
+                        <td><input type="number" value="0" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <strong>Total del Carrito:</strong> <span id="cartTotal">$0.00</span>
+            </div>
+        </div>
+        <div class="product-image-container">
+            <img src="Imagenes/images (1).jpeg" alt="Surtido de útiles escolares" class="decorative-image">
+        </div>
+    </main>
+
+    <div class="back-button-container">
+        <a href="categoria.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <script src="js/escolares.js"></script>
+</body>
+</html>
+

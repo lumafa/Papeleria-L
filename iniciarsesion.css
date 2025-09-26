@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado de la página de inicio de sesión - Estilos consistentes */
+.login-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.login-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.login-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal del formulario de inicio de sesión */
+.login-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 30px;
+    background-color: #ffffff;
+    margin: 40px auto; /* Centrar y añadir margen superior/inferior */
+    max-width: 500px; /* Ancho máximo del formulario */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+    font-size: 2.8em; /* Letra más grande para el título */
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center; /* Centrar el título */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo de los campos del formulario */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Espacio entre los grupos de formulario */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em; /* Letra más grande para las etiquetas */
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px; /* Más padding para campos de entrada más grandes */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.2em; /* Letra más grande para los campos de entrada */
+    background-color: #F8F0F8; /* Fondo rosa/beige muy claro para los campos */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil en los inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #FF007F; /* Borde rosa al enfocar, consistente */
+    box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra y halo al enfocar */
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px; /* Más padding para el botón */
+    margin-top: 40px; /* Más margen superior para separarlo del último campo */
+    background-color: #FF007F; /* Botón rosa vibrante consistente */
+    color: #fff;
+    font-size: 1.6em; /* Letra más grande para el botón */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 0, 127, 0.3);
+}
+
+.submit-btn:hover {
+    background-color: #cc0066; /* Rosa más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeña elevación */
+    box-shadow: 0 6px 12px rgba(255, 0, 127, 0.4);
+}
+
+/* Pie de página de la página de inicio de sesión - Estilos consistentes */
+.login-footer {
+    padding: 20px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* Responsive Design para la página de inicio de sesión */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .login-title {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    .submit-btn {
+        padding: 14px;
+        font-size: 1.4em;
+    }
+
+    .login-header, .login-footer {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .login-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .login-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .submit-btn {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}

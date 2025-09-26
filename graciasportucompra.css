@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.thanks-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.thanks-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.thanks-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.thanks-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Contenido principal de la página de agradecimiento */
+.thanks-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Ancho máximo para el contenedor de agradecimiento */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra todo el texto dentro del contenedor */
+}
+
+.thanks-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.thanks-title {
+    font-size: 3em;
+    color: #4CAF50; /* Verde para el éxito */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thanks-message {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.thanks-image-placeholder {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para la imagen */
+}
+
+.decorative-thanks-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.further-instructions {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thanks-header {
+        padding: 10px 20px;
+    }
+    .thanks-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+    .thanks-title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+    .thanks-message {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    .thanks-image-placeholder {
+        margin: 20px auto;
+        max-width: 300px;
+    }
+    .further-instructions {
+        font-size: 1em;
+        margin-top: 20px;
+    }
+    .bottom-nav {
+        padding: 10px 0;
+    }
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .thanks-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .thanks-header .logo-text {
+        font-size: 1.8em;
+    }
+    .thanks-header .header-title {
+        font-size: 1.5em;
+    }
+    .thanks-title {
+        font-size: 1.8em;
+    }
+    .thanks-message {
+        font-size: 1em;
+    }
+    .further-instructions {
+        font-size: 0.9em;
+    }
+    .thanks-image-placeholder {
+        max-width: 250px;
+    }
+}

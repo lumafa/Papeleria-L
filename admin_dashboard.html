@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Papelería PL</title>
+    <link rel="stylesheet" href="admin_dashboard.css">
+
+</head>
+<body>
+    <!-- Encabezado consistente con las otras páginas -->
+    <header class="dashboard-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Panel de Administración</span>
+        <div class="header-actions">
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido principal del panel de administración -->
+    <main class="dashboard-main">
+        <h1 class="dashboard-welcome">Bienvenido, Administrador</h1>
+        <p class="dashboard-message">Selecciona una opción para gestionar la papelería:</p>
+        
+        <div class="dashboard-options-grid">
+            <a href="categoria.html" class="dashboard-option">
+                <i class="fas fa-boxes"></i>
+                <span>Gestionar Categorías</span>
+            </a>
+            <a href="pedido.html" class="dashboard-option">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Ver Pedidos</span>
+            </a>
+            <a href="factactual.html" class="dashboard-option">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Generar Facturas</span>
+            </a>
+            <a href="despachos.html" class="dashboard-option">
+                <i class="fas fa-truck-loading"></i>
+                <span>Gestionar Despachos</span>
+            </a>
+            <a href="inventario.html" class="dashboard-option">
+                <i class="fas fa-warehouse"></i>
+                <span>Ver Inventario</span>
+            </a>
+            <a href="cancelar.html" class="dashboard-option">
+                <i class="fas fa-ban"></i>
+                <span>Cancelar Pedidos</span>
+            </a>
+            <a href="pagoenlinea.html" class="dashboard-option">
+                <i class="fas fa-credit-card"></i>
+                <span>Pagos en Línea</span>
+            </a>
+            <!-- Puedes añadir más enlaces aquí si creas nuevas páginas de administración -->
+            <a href="categoria.html" class="dashboard-option">
+                <i class="fas fa-home"></i>
+                <span>Ir a la Tienda</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior (opcional para esta página, pero por consistencia) -->
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio (Tienda)</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Menú Principal</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Enlazando el script JS específico para el panel de administración -->
+    <script src="js/admin_dashboard.js"></script>
+</body>
+</html>

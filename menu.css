@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Regla universal para el modelo de caja */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.menu-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.menu-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.menu-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal de la página de menú */
+.menu-main {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding: 40px 20px;
+    margin: 20px auto; /* Centrar con margen */
+    max-width: 600px; /* Ancho máximo para la lista del menú */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+    font-size: 2.8em; /* Tamaño de fuente grande */
+    color: #343a40; /* Color de texto consistente */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.menu-options-container {
+    width: 100%;
+}
+
+.menu-list {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between; /* Alinea el texto a la izquierda y la flecha a la derecha */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f0f0f0; /* Fondo ligeramente gris para los elementos del menú */
+    border-radius: 8px;
+    text-decoration: none;
+    color: #343a40;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0; /* Un gris más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.menu-item i.fas {
+    color: #6c757d; /* Color para los iconos de flecha */
+    font-size: 1em;
+}
+
+/* Barra de navegación inferior (consistente con categories.html y track.html) */
+.bottom-nav {
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky; /* Se mantiene en la parte inferior */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1; /* Para que cada elemento ocupe el mismo espacio */
+}
+
+.bottom-nav .nav-icon,
+.bottom-nav .nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar el contenido del botón */
+    padding: 8px 5px; /* Ajustar padding */
+    color: #6c757d; /* Color de icono gris */
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none; /* Eliminar fondo de botón */
+    border: none; /* Eliminar borde de botón */
+    cursor: pointer;
+    width: 100%; /* Ocupa todo el ancho disponible en su li */
+}
+
+.bottom-nav .nav-icon i.fas,
+.bottom-nav .nav-button i.fas {
+    font-size: 28px; /* Tamaño del icono */
+    margin-bottom: 5px;
+    color: #6c757d; /* Color del icono */
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover,
+.bottom-nav .nav-button:hover {
+    color: #0000FF; /* Azul al pasar el ratón */
+}
+
+.bottom-nav .nav-icon:hover i.fas,
+.bottom-nav .nav-button:hover i.fas {
+    color: #0000FF; /* Azul del SVG al pasar el ratón */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+
+    .menu-title {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+
+    .menu-item {
+        padding: 12px 15px;
+        font-size: 1.1em;
+    }
+
+    .menu-header {
+        padding: 10px 15px;
+    }
+
+    .menu-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-header .logo-text {
+        font-size: 2em;
+    }
+
+    .bottom-nav {
+        padding: 10px 0;
+    }
+
+    .bottom-nav .nav-icon i.fas,
+    .bottom-nav .nav-button i.fas {
+        font-size: 24px;
+    }
+
+    .bottom-nav .nav-icon span,
+    .bottom-nav .nav-button span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .menu-item {
+        padding: 10px 12px;
+        font-size: 1em;
+    }
+
+    .menu-header .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-header .logo-text {
+        font-size: 1.8em;
+    }
+}

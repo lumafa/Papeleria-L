@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado de la página de pagos */
+.payments-header {
+    display: flex;
+    justify-content: flex-start; /* Alinea a la izquierda el logo y el título */
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.payments-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.payments-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.payments-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Contenido principal de la página de pagos */
+.payments-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px; /* Ancho máximo para el contenedor de secciones de tarjetas */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de resumen de factura en la página de pagos */
+.invoice-summary-container {
+    width: 100%;
+    background-color: #f2f2f2; /* Fondo claro similar a la tabla de factura */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px; /* Espacio antes de las opciones de pago */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.invoice-summary-title {
+    font-size: 2em;
+    color: #0000FF; /* Azul consistente */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #0000FF; /* Línea azul */
+    padding-bottom: 10px;
+}
+
+.payment-invoice-number {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.payment-invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.payment-invoice-table th,
+.payment-invoice-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Evita que el contenido se rompa */
+}
+
+.payment-invoice-table thead th {
+    background-color: #e0e0e0; /* Fondo más oscuro para el encabezado */
+    color: #343a40;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.payment-invoice-table tbody td {
+    font-size: 0.95em;
+    color: #343a40;
+}
+
+.payment-invoice-table tbody tr:hover {
+    background-color: #eaeaea; /* Efecto hover */
+}
+
+/* Alineación de columnas específicas para la tabla de pago */
+.payment-invoice-table .col-unid,
+.payment-invoice-table .col-vr-unidad,
+.payment-invoice-table .col-vr-total {
+    text-align: right;
+}
+
+.payment-total-display {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #0000FF; /* Línea azul para el total */
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1a428a;
+}
+
+.card-sections-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye las secciones de tarjetas */
+    width: 100%;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+    gap: 30px; /* Espacio entre las secciones */
+}
+
+.card-section {
+    flex: 1; /* Cada sección ocupa el espacio disponible */
+    min-width: 300px; /* Ancho mínimo antes de envolver */
+    padding: 20px;
+    background-color: #f2f2f2; /* Fondo claro para las secciones */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido de cada sección */
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #0000FF; /* Título azul consistente con la imagen */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    background-color: #0000FF; /* Fondo azul para el título */
+    color: #fff; /* Texto blanco en el título */
+    padding: 10px 0;
+    border-radius: 8px 8px 0 0; /* Bordes superiores redondeados */
+    margin-top: -20px; /* Ajuste para que el título se extienda al borde superior */
+    margin-bottom: 20px;
+}
+
+.card-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
+    justify-content: center; /* Centra las imágenes */
+    gap: 15px; /* Espacio entre las imágenes de las tarjetas */
+    padding: 10px;
+}
+
+.card-images img {
+    width: 150px; /* Ancho fijo para las imágenes de las tarjetas */
+    height: 90px; /* Alto fijo para mantener la proporción */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Esquinas redondeadas para las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-images img:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payments-header {
+        padding: 10px 20px;
+    }
+    .payments-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+    .invoice-summary-container {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .invoice-summary-title {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    .payment-invoice-number {
+        font-size: 1.1em;
+    }
+    .payment-invoice-table th,
+    .payment-invoice-table td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+    .payment-total-display {
+        font-size: 1.5em;
+    }
+    .card-sections-container {
+        flex-direction: column; /* Apila las secciones en pantallas más pequeñas */
+        align-items: center;
+        gap: 20px;
+    }
+    .card-section {
+        min-width: 90%; /* Ocupa casi todo el ancho disponible */
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 1.5em;
+        margin-top: -15px;
+    }
+    .card-images {
+        gap: 10px;
+    }
+    .card-images img {
+        width: 120px; /* Reducir el tamaño de las tarjetas */
+        height: 72px;
+    }
+    .bottom-nav {
+        padding: 10px 0;
+    }
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .payments-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .payments-header .logo-text {
+        font-size: 1.8em;
+    }
+    .payments-header .header-title {
+        font-size: 1.5em;
+    }
+    .invoice-summary-title {
+        font-size: 1.5em;
+    }
+    .payment-invoice-number {
+        font-size: 1em;
+    }
+    .payment-invoice-table th,
+    .payment-invoice-table td {
+        padding: 6px 8px;
+        font-size: 0.75em;
+    }
+    .payment-total-display {
+        font-size: 1.2em;
+    }
+    .section-title {
+        font-size: 1.2em;
+    }
+    .card-images img {
+        width: 100px; /* Reducir aún más para móviles muy pequeños */
+        height: 60px;
+    }
+}

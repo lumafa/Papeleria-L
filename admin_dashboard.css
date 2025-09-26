@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado consistente con las otras páginas */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.dashboard-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.dashboard-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header .header-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el botón a la derecha */
+}
+
+.dashboard-header .logout-btn {
+    background-color: #dc3545; /* Rojo para cerrar sesión */
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header .logout-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenido principal del panel de administración */
+.dashboard-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px; /* Ancho máximo para el panel */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-welcome {
+    font-size: 2.8em;
+    color: #343a40;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.dashboard-message {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.dashboard-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre las opciones */
+    width: 100%;
+    padding: 0 10px;
+}
+
+.dashboard-option {
+    background-color: #e0f7fa; /* Fondo azul claro para las opciones */
+    border: 1px solid #b2ebf2;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #007bff; /* Color de texto azul para las opciones */
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-option:hover {
+    background-color: #b2ebf2; /* Fondo más oscuro al pasar el ratón */
+    color: #0056b3;
+    transform: translateY(-5px); /* Pequeña elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-option i.fas {
+    font-size: 3.5em; /* Tamaño grande para los iconos */
+    margin-bottom: 15px;
+    color: #0000FF; /* Azul para los iconos */
+}
+
+
+/* Barra de navegación inferior (consistente) */
+.bottom-nav {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-nav .nav-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px;
+    color: #6c757d;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom-nav .nav-icon i.fas {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.bottom-nav .nav-icon:hover {
+    color: #0000FF;
+}
+
+.bottom-nav .nav-icon:hover i.fas {
+    color: #0000FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .dashboard-header .header-title {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .dashboard-header .logout-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .dashboard-main {
+        padding: 30px 15px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+    .dashboard-welcome {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    .dashboard-message {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .dashboard-options-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste para pantallas más pequeñas */
+        gap: 20px;
+    }
+    .dashboard-option {
+        padding: 20px;
+        font-size: 1.1em;
+    }
+    .dashboard-option i.fas {
+        font-size: 2.8em;
+        margin-bottom: 10px;
+    }
+    .bottom-nav {
+        padding: 10px 0;
+    }
+    .bottom-nav .nav-icon i.fas {
+        font-size: 24px;
+    }
+    .bottom-nav .nav-icon span {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .dashboard-header .logo-text {
+        font-size: 1.8em;
+    }
+    .dashboard-header .header-title {
+        font-size: 1.5em;
+    }
+    .dashboard-welcome {
+        font-size: 1.8em;
+    }
+    .dashboard-message {
+        font-size: 0.9em;
+    }
+    .dashboard-options-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+        gap: 15px;
+    }
+    .dashboard-option {
+        padding: 15px;
+        font-size: 1em;
+    }
+    .dashboard-option i.fas {
+        font-size: 2.2em;
+    }
+}

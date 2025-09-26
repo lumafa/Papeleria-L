@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos - Papelería PL</title>
+    <link rel="stylesheet" href="inventario.css">
+
+ 
+</head>
+<body>
+    <header class="inventory-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Inventario de Productos</span>
+    </header>
+
+    <main class="inventory-main">
+        <div class="inventory-table-container">
+            <h1 class="table-title">Estado Actual del Inventario</h1>
+            <table class="inventory-table" id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Detalle Producto</th>
+                        <th>Cantidad de Inicio</th>
+                        <th>Cantidad Existente</th>
+                        <th>Valor Unidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr data-product-name="Archivadores" data-unit-price="#">
+                        <td>Archivadores</td>
+                        <td>300</td>
+                        <td><input type="number" value="20" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">4500</td>
+                    </tr>
+                    <tr data-product-name="Clips" data-unit-price="#">
+                        <td>Clips</td>
+                        <td>1200</td>
+                        <td><input type="number" value="30" min="0" class="product-quantity"></td>
+                        <td class="product-subtotal">30</td>
+                    </tr>    
+                    <!-- LLos productos se cargarán aquí dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="idex.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Más</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/inventario.js"></script>
+</body>
+</html>

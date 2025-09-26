@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+    
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos: logo + papelería a la izquierda, botones a la derecha */
+    align-items: center;
+    padding: 10px 30px; /* Ajuste de padding */
+    background-color: #0000FF; /* Azul del encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante */
+    border-radius: 50%; /* Completamente redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* ¡AJUSTE CLAVE AQUÍ! Menos margen entre el logo y el texto Papelería */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff; /* ¡AJUSTE CLAVE AQUÍ! Color del texto Papelería a blanco */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-right: auto; /* Empuja el siguiente elemento (header-right) a la derecha */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo claro consistente */
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Encabezado de la página de registro - Estilos consistentes con .header de style.css */
+.reg-header {
+    display: flex;
+    justify-content: flex-start; /* Alinea logo a la izquierda */
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0; /* Evita que el encabezado se encoja */
+}
+
+.reg-header .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #FF007F; /* Rosa vibrante consistente */
+    border-radius: 50%; /* Completamente redondo consistente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.reg-header .logo-text {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal del formulario */
+.register-container {
+    flex-grow: 1; /* Permite que el contenedor del formulario ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 30px; /* Más padding para que se vea mejor */
+    background-color: #ffffff;
+    margin: 40px auto; /* Centrar y añadir margen superior/inferior para separarlo del header/footer */
+    max-width: 500px; /* Ancho máximo del formulario, ajustado un poco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra consistente */
+}
+
+.register-title {
+    font-size: 2.8em; /* ¡AJUSTE CLAVE AQUÍ! Letra más grande para el título */
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center; /* Centrar el título */
+}
+
+.register-form {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo de los campos del formulario */
+}
+
+.form-group {
+    margin-bottom: 20px; /* ¡AJUSTE CLAVE AQUÍ! Más espacio entre los grupos de formulario */
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em; /* ¡AJUSTE CLAVE AQUÍ! Letra más grande para las etiquetas */
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px; /* ¡AJUSTE CLAVE AQUÍ! Más padding para campos de entrada más grandes */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.2em; /* ¡AJUSTE CLAVE AQUÍ! Letra más grande para los campos de entrada */
+    background-color: #f0f8ff; /* Fondo muy claro para los campos */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #FF007F; /* Borde rosa al enfocar, consistente con .highlight */
+    box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.2); /* Sombra suave al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 18px; /* ¡AJUSTE CLAVE AQUÍ! Más padding para el botón */
+    margin-top: 40px; /* Más margen superior para separarlo del último campo */
+    background-color: #FF007F; /* ¡AJUSTE CLAVE AQUÍ! Botón rosa vibrante */
+    color: #fff;
+    font-size: 1.6em; /* ¡AJUSTE CLAVE AQUÍ! Letra más grande para el botón */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 0, 127, 0.3);
+}
+
+.submit-btn:hover {
+    background-color: #cc0066; /* Rosa más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeña elevación */
+    box-shadow: 0 6px 12px rgba(255, 0, 127, 0.4);
+}
+
+/* Pie de página de la página de registro - Estilos consistentes con .footer de style.css */
+.reg-footer {
+    padding: 20px;
+    background-color: #0000FF; /* Azul oscuro consistente */
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0; /* Evita que el pie de página se encoja */
+    margin-top: auto; /* Empuja el pie de página hacia abajo */
+}
+
+/* Responsive Design para la página de registro */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%; /* Más ancho en tablets */
+    }
+
+    .register-title {
+        font-size: 2.2em; /* Ajuste de fuente en responsive */
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        font-size: 1em; /* Ajuste de fuente en responsive */
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 1.1em; /* Ajuste de fuente en responsive */
+    }
+
+    .submit-btn {
+        padding: 14px;
+        font-size: 1.4em; /* Ajuste de fuente en responsive */
+    }
+
+    .reg-header, .reg-footer {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reg-header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reg-header .logo-text {
+        font-size: 1.8em;
+    }
+
+    .register-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 1em; /* Ajuste de fuente en responsive */
+    }
+
+    .submit-btn {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}

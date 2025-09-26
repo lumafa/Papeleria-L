@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura - Papelería Lucelly</title>
+    <link rel="stylesheet" href="factactual.css">
+</head>
+<body>
+    <header class="factura-header">
+        <div class="logo">
+            <span class="logo-text">PL</span>
+        </div>
+        <span class="header-title">Papelería Lucelly</span>
+        <div class="header-actions">
+            <span class="invoice-number" id="invoiceNumber">Factura No. 0001</span>
+        </div>
+    </header>
+
+    <main class="factura-main">
+        <div class="invoice-container">
+            <div class="customer-info-section">
+                <div class="customer-detail">
+                    <span>Nombre</span>
+                    <span id="customerName">xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx</span>
+                </div>
+                <div class="customer-detail">
+                    <span>Número cédula</span>
+                    <span id="customerID">xxxxxxxx</span>
+                </div>
+                <div class="customer-detail">
+                    <span>Dirección</span>
+                    <span id="customerAddress">xx xx xxxx</span>
+                </div>
+                <div class="customer-detail">
+                    <span>Teléfono</span>
+                    <span id="customerPhone">xxxxxxxx</span>
+                </div>
+            </div>
+
+            <table class="invoice-table" id="invoiceTable">
+                <thead>
+                    <tr>
+                        <th class="column-fecha">Fecha</th>
+                        <th class="column-unid">Unid</th>
+                        <th class="column-detalle">Detalle</th>
+                        <th class="column-vr-unidad">Vr unidad</th>
+                        <th class="column-vr-total">Vr Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <div class="invoice-total-display">
+                <strong>Total</strong>
+                <span id="invoiceTotal">$0.00</span>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="categoria.html" class="nav-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="nav-icon">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>Más</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="js/factactual.js"></script>
+</body>
+</html>
