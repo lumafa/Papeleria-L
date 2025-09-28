@@ -5,6 +5,7 @@ Contenido de prueba para mi nuevo repositorio.
 Software de gestión integral para Papelería Lucelly
 
 Abril-10-2025
+Agosto-5-2025
 
 Luz Marina F
 
